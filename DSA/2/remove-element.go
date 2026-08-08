@@ -7,10 +7,8 @@ func removeElement(nums []int, val int) int {
 
 	for p1 <= p2 {
 		if nums[p1] == val {
-			a := nums[p1]
-			b := nums[p2]
-			nums[p1] = b
-			nums[p2] = a
+			nums[p1] = nums[p2]
+			nums[p2] = nums[p1]
 			p2--
 		} else {
 			p1++
